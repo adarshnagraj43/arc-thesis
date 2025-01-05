@@ -1,0 +1,31 @@
+name: CI Pipeline
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up environment
+      run: |
+        echo "Setting up build environment"
+        
+    - name: Run tests
+      run: |
+        echo "Running test suite"
+        # Add your test commands here
+        
+    - name: Build artifacts
+      run: |
+        echo "Building deployment artifacts"
+        # Add your build commands here
+        
+    - name: Verify runner scaling
+      run: |
+        echo "Verifying autoscaling behavior"
+        # Add verification steps here

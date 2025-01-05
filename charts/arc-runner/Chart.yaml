@@ -1,0 +1,5 @@
+apiVersion: v2
+name: arc-runner
+description: A Helm chart for deploying GitHub Actions Runner Controller
+version: 0.1.0
+appVersion: "1.0.0"

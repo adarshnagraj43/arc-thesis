@@ -1,0 +1,24 @@
+controller:
+  repository: ghcr.io/actions/actions-runner-controller
+  tag: v0.27.0
+  
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+
+runner:
+  repository: your-org/your-repo
+  labels:
+    - self-hosted
+    - linux
+    - x64
+  
+  scaling:
+    minReplicas: 1
+    maxReplicas: 10
+    scaleUpThreshold: 2
+    scaleDownThreshold: 1
